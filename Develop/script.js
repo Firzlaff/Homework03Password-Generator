@@ -2,13 +2,16 @@
 var generateBtn = document.querySelector("#generate");
 
 var characterLength = prompt("please choose password length between 8-128");
-var lowerCase = confrim("Characters contain lowercase");
-var upperCase = confrim("Characters contain uppercase");
+var lowerCase = confrim("Letters contain lowercase");
+var upperCase = confrim("Letters contain uppercase");
 var containsNumbers = confrim("Characters contain numbers");
-var containsCharacters = confrim("Characters contain soecial characters");
+var containsCharacters = confrim("Characters contain special characters");
 
 
-
+var charlow = ("abcdefghijklmnopqrstuvwxyz");
+var charup = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+var num = ("0123456789");
+var sym = ("!@#$%?&*");
 
 
 // Write password to the #password input
