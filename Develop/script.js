@@ -1,11 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 var characterLength = prompt("please choose password length between 8-128");
+
 var lowerCase = confrim("Letters contain lowercase");
+
 var upperCase = confrim("Letters contain uppercase");
+
 var containsNumbers = confrim("Characters contain numbers");
+
 var containsCharacters = confrim("Characters contain special characters");
+
+
 
 
 var charlow = ("abcdefghijklmnopqrstuvwxyz");
@@ -25,3 +32,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
