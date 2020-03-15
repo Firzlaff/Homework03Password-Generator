@@ -27,14 +27,14 @@ var contSpec = confirm("Characters contain special characters");
 //  console.log(contSpec)
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
+//function writePassword() {
+  //var password = generatePassword();
 
-  var passwordText = document.querySelector("#password");
+//  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//  passwordText.value = password;
 
-}
+//}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); {
@@ -57,5 +57,25 @@ funtion writePassword() {
 //all four char options 
 if (lowLet && upLet && contNums && contSpec){
   chars = (charup, charlow, num, sym);
+}
+// 3 char options
+else if(lowLet && contNums && contSpec){
+  chars = concat(charlow, contNums, contSpec);
+}
+else if(lowLet && upLet && contSpec){
+  chars = concat(charlow, charup, sym);
+}
+else if (lowLet && contNums && contSpec){
+  chars = concat(charlow, num, sym);
+}
+//2 char options
+else if(lowLet && upLet){
+  chars = concat(charlow, charup);
+}
+else if(lowLet && contNums){
+  char = concat(charlow, num);
+}
+else if(lowLet && contSpec){
+  char = concat(charlow, sym)
 }
 }
