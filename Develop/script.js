@@ -6,14 +6,27 @@ var sym = ['!', '@', '#', '$', '%', '?', '&', '*'];
 
 
 var generateBtn = document.querySelector("#generate"); {
- }
-// prompts for char length
-var charLen = prompt("Enter Password length between 8-128"); 
+
+}
+
+// Event listner for event click to start prompts
+generateBtn.addEventListener("click", charPrompt); {
+
+}
+ 
+// prompts for char length with required peramiters
+function charPrompt(){
+   var charLen = prompt("Enter Password length between 8-128"); { 
+   while(charLen <= 7 || charLen >= 129) {
+     alert("Please attempt again, Password length must be between 8-128 characters");
+     var charLen = prompt("Enter Password length between 8-128");}
+}
 // confirms for char
 var lowLet = confirm("Letters contain lowercase");
 var upLet = confirm("Letters contain uppercase");
 var contNums = confirm("Characters contain numbers");
 var contSpec = confirm("Characters contain special characters");
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -24,24 +37,14 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); {
-
-}
-
 //Generating a random letter using my array. 
 // function generateRdm(){
 //  Math.random().toString(36).slice(2)
- 
 for (var i = 0; i < 1; i++) {
-  
   var generateRdm = char[Math.floor(Math.random() * char.length)];
   //  console.log(generateRdm)
 }
-
 // if and else ifs for password generation
-
 //all four char options 
 if (lowLet && upLet && contNums && contSpec){
   chars = (charup, charlow, num, sym);
