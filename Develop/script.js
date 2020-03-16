@@ -7,7 +7,8 @@ var sym = ['!', '@', '#', '$', '%', '?', '&', '*'];
 var upLet = charup
 var contNums = num
 var contSpec = sym 
-
+//var lowlet = charlow
+var charLen
 
 var generateBtn = document.querySelector("#generate"); {
 
@@ -34,44 +35,42 @@ var contSpec = confirm("Characters contain special characters");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = password;
 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
-}
-//Generating a random letter using my array. 
-// function generateRdm(){
-//  Math.random().toString(36).slice(2)
-for (var i = 0; i < 1; i++) {
-  var generateRdm = chars[Math.floor(Math.random() * chars.length)];
-  //  console.log(generateRdm)
-}
+//Generating a random letter using my array.
+//for (var i = 0; i < 10; i++) {                                                                                     //idea for later maybe
+  var generateRdm = charlow[Math.floor(Math.random() * charlow.length)];                                              // function generateRdm(){
+    console.log(generateRdm)                                                                                   //  Math.random().toString(36).slice(2)
+//}
 // if and else ifs for password generation my idea here is to just take the input and then add the char to the loop
 //all 3 char options and lowercase
 if (lowLet && upLet && contNums && contSpec){
-  chars = (charup += charlow += num += sym);
+  var chars = (charup += charlow += num += sym);
 }
 // 2 char options and included lowercase
 else if(lowLet && contNums && contSpec){
-  chars = (charlow += num += sym);
+  var chars = (charlow += num += sym);
 }
 else if(lowLet && upLet && contSpec){ 
-  chars = (charlow += charup += sym);
+  var chars = (charlow += charup += sym);
 }
 else if (lowLet && contNums && contSpec){
-  chars = (charlow += num += sym);
+  var chars = (charlow += num += sym);
 }
 //1 char option and included lowercase
 else if(lowLet && upLet){
-  chars = (charlow += charup);
+  var chars = (charlow += charup);
 }
 else if(lowLet && contNums){
-  chars = (charlow += num);
+  var chars = (charlow += num);
 }
 else if(lowLet && contSpec){
-  chars = (charlow += sym);
+  var chars = (charlow += sym);
 }
 
-// console.log(chars)
+// console.log(generateRdm)
