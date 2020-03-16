@@ -33,6 +33,14 @@ function charPrompt() {
   contNums = confirm("Characters contain numbers");
   contSpec = confirm("Characters contain special characters");
 
+   while (lowLet === false && upLet === false && contNums === false && contSpec === false){
+      alert("Please attempt again you must choose at least one Character type");
+        lowLet = confirm("Letters contain lowercase");
+        upLet = confirm("Letters contain uppercase");
+        contNums = confirm("Characters contain numbers");
+        contSpec = confirm("Characters contain special characters");
+  }
+
 }
 
 //function to pull a random char from the chosen array//
