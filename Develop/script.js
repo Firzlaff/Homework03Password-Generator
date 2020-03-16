@@ -45,7 +45,7 @@ function writePassword() {
 // function generateRdm(){
 //  Math.random().toString(36).slice(2)
 for (var i = 0; i < 1; i++) {
-  var generateRdm = char[Math.floor(Math.random() * char.length)];
+  var generateRdm = chars[Math.floor(Math.random() * chars.length)];
   //  console.log(generateRdm)
 }
 // if and else ifs for password generation my idea here is to just take the input and then add the char to the loop
@@ -73,3 +73,5 @@ else if(lowLet && contNums){
 else if(lowLet && contSpec){
   chars = concat(charlow, sym);
 }
+
+console.log(chars)
