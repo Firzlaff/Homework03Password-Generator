@@ -16,3 +16,4 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 Img of what the password generator will look like 
+<img src="Assets.Images.PasswordGenScreenshot.jpg" alt="Pic of Password-Generator"/>
