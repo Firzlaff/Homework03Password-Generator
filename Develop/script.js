@@ -3,7 +3,7 @@ var charlow = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 var charup = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ];
 var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 var sym = ['!', '@', '#', '$', '%', '?', '&', '*'];
-// i added them hiere sice when i added the var dow in the confirms with the function loop it nested them
+// i added them here sice when i added the var dow in the confirms with the function loop it nested them there. 
 var upLet = charup
 var contNums = num
 var contSpec = sym 
@@ -51,27 +51,27 @@ for (var i = 0; i < 1; i++) {
 // if and else ifs for password generation my idea here is to just take the input and then add the char to the loop
 //all 3 char options and lowercase
 if (lowLet && upLet && contNums && contSpec){
-  chars = (charup, charlow, num, sym);
+  chars = (charup += charlow += num += sym);
 }
 // 2 char options and included lowercase
 else if(lowLet && contNums && contSpec){
-  chars = concat(charlow, num, sym);
+  chars = (charlow += num += sym);
 }
 else if(lowLet && upLet && contSpec){ 
-  chars = concat(charlow, charup, sym);
+  chars = (charlow += charup += sym);
 }
 else if (lowLet && contNums && contSpec){
-  chars = concat(charlow, num, sym);
+  chars = (charlow += num += sym);
 }
 //1 char option and included lowercase
 else if(lowLet && upLet){
-  chars = concat(charlow, charup);
+  chars = (charlow += charup);
 }
 else if(lowLet && contNums){
-  chars = concat(charlow, num);
+  chars = (charlow += num);
 }
 else if(lowLet && contSpec){
-  chars = concat(charlow, sym);
+  chars = (charlow += sym);
 }
 
-console.log(chars)
+// console.log(chars)
