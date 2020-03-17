@@ -1,18 +1,14 @@
-// I feel I need to create an object that is chars that has the key and values for the char types and what they are. 
-//var chars= {
-// Char arrays
+// Charachter arrays
 var charlow = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var charup = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 var sym = ['!', '@', '#', '$', '%', '?', '&', '*'];
-//} 
-// i added them here sice when i added the var down in the confirms with the function loop it nested them there. 
+// extra var decs
 var upLet;
 var contNums;
 var contSpec;
 var lowlet;
 var charLen;
-
 
 var generateBtn = document.querySelector("#generate");
 
@@ -40,15 +36,11 @@ function charPrompt() {
         contNums = confirm("Characters contain numbers");
         contSpec = confirm("Characters contain special characters");
   }
-
 }
-
 //function to pull a random char from the chosen array//
 function rdmChar (arr) {
   return arr[Math.floor(Math.random() * arr.length)]
-
 }
-
 //generate password function//
 function generatePassword() {
   var password = []
@@ -59,14 +51,13 @@ function generatePassword() {
   if (contSpec) password.push(rdmChar(sym));
  
     while (password.length < charLen) {
-      if (lowLet && password.length < charLen)password.push(rdmChar(charlow));
-      if (upLet && password.length < charLen)password.push(rdmChar(charup));
-      if (contNums && password.length < charLen)password.push(rdmChar(num));
-      if (contSpec && password.length < charLen)password.push(rdmChar(sym));
+      if (lowLet && password.length < charLen) password.push(rdmChar(charlow));
+      if (upLet && password.length < charLen) password.push(rdmChar(charup));
+      if (contNums && password.length < charLen) password.push(rdmChar(num));
+      if (contSpec && password.length < charLen) password.push(rdmChar(sym));
   }
-  return password.join("")
+      return password.join("")
 }
-
 // Write password to the #password input
 function writePassword() {
 
