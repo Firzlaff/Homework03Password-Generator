@@ -13,7 +13,7 @@ var charLen;
 var generateBtn = document.querySelector("#generate");
 
 // Event listner for event click to start prompts//
-window.onload.generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 
 // prompts for char length with required peramiters//
 function charPrompt() {
